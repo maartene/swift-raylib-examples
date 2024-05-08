@@ -22,9 +22,7 @@ import RaylibKit
 			circles.append(.random())
 		}
 
-		music = try Filesystem
-			.file(at: "mini1111.xm", from: .module)
-			.loadAsMusic()
+		music = try Music(at: "mini1111.xm", bundle: .module)
 		music.isLooping = false;
 		music.play()
 	}

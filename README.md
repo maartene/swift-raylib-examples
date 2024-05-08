@@ -42,55 +42,55 @@ Examples using raylib core platform functionality like window creation, inputs, 
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![A window with "Congrats, you created your first window" written in the middle](Assets/Screenshots/minimal-light.png)
+![A window with "Congrats, you created your first window" written in the middle](Assets/screenshots/minimal-light.png)
 
 ### [Input Keys](Sources/Core/Input%20Keys/App.swift)
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![A window with a ball and the text "Move the ball with the arrow keys"](Assets/Screenshots/input-keys.png)
+![A window with a ball and the text "Move the ball with the arrow keys"](Assets/screenshots/input-keys.png)
 
 ### [Input Mouse](Sources/Core/Input%20Mouse/App.swift)
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![A window with a ball and the text "Use the mouse to move the ball and change the color with the mouse buttons"](Assets/Screenshots/input-mouse.png)
+![A window with a ball and the text "Use the mouse to move the ball and change the color with the mouse buttons"](Assets/screenshots/input-mouse.png)
 
 ### [Input Mouse Wheel](Sources/Core/Input%20Mouse%20Wheel/App.swift)
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![A window with a box and the text "Use mouse wheel to move up and down" along with another text giving the Y position of the cube"](Assets/Screenshots/input-mouse-wheel.png)
+![A window with a box and the text "Use mouse wheel to move up and down" along with another text giving the Y position of the cube"](Assets/screenshots/input-mouse-wheel.png)
 
 ### [2D Camera](Sources/Core/2D%20Camera/App.swift)
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/2d-camera.png)
+![Screenshot of the example](Assets/screenshots/2d-camera.png)
 
 ### [2D Camera Mouse Zoom](Sources/Core/2D%20Camera%20Mouse%20Zoom/App.swift)
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/2d-camera-mouse-zoom.png)
+![Screenshot of the example](Assets/screenshots/2d-camera-mouse-zoom.png)
 
 ### [2D Camera Platformer](Sources/Core/2D%20Camera%20Platformer/App.swift)
 
 Written by ![C] [avyy], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/2d-camera-platformer.png)
+![Screenshot of the example](Assets/screenshots/2d-camera-platformer.png)
 
 ### [Letterboxed Window](Sources/Core/Letterboxed%20Window/App.swift)
 
 Written by ![C] [Anata], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/letterboxed-window.png)
+![Screenshot of the example](Assets/screenshots/letterboxed-window.png)
 
 ### [Drop Files](Sources/Core/Drop%20Files/App.swift)
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/drop-files.png)
+![Screenshot of the example](Assets/screenshots/drop-files.png)
 
 ## 🔺 Category: Shapes
 
@@ -100,25 +100,25 @@ Examples using raylib basic 2D drawing functionality like various shape drawing,
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/basic-shapes.png)
+![Screenshot of the example](Assets/screenshots/basic-shapes.png)
 
 ### [Bouncing Ball](Sources/Shapes/Bouncing%20Ball/App.swift)
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/bouncing-ball.png)
+![Screenshot of the example](Assets/screenshots/bouncing-ball.png)
 
 ### [Color Palette](Sources/Shapes/Color%20Palette/App.swift)
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/color-palette.png)
+![Screenshot of the example](Assets/screenshots/color-palette.png)
 
 ### [Following Eyes](Sources/Shapes/Following%20Eyes/App.swift)
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/following-eyes.png)
+![Screenshot of the example](Assets/screenshots/following-eyes.png)
 
 ## 🖼 Category: Textures
 
@@ -128,19 +128,19 @@ Examples using raylib image functionality like texture drawing, image manipulati
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/image-generation.png)
+![Screenshot of the example](Assets/screenshots/image-generation.png)
 
 ### [Logo Raylib](Sources/Textures/Logo%20Raylib/App.swift)
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/logo-raylib.png)
+![Screenshot of the example](Assets/screenshots/logo-raylib.png)
 
 ### [Blend Modes](Sources/Core/Blend%20Modes/App.swift)
 
 Written by ![C] [Karlo Licudine], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/blend-modes.png)
+![Screenshot of the example](Assets/screenshots/blend-modes.png)
 
 ## 🔊 Category: Audio
 
@@ -148,7 +148,7 @@ Written by ![C] [Karlo Licudine], translated by ![Swift] [Lancelot]
 
 Written by ![C] [Ray], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/blend-modes.png)
+![Screenshot of the example](Assets/screenshots/blend-modes.png)
 
 ## 👾 Category: Classic Games
 
@@ -158,13 +158,13 @@ Classic games implemented using raylib!
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/arkanoid.png)
+![Screenshot of the example](Assets/screenshots/arkanoid.png)
 
 ### [Snake](Sources/Classics/Snake/App.swift)
 
 Written by ![C] [ray], translated by ![Swift] [Lancelot]
 
-![Screenshot of the example](Assets/Screenshots/snake.png)
+![Screenshot of the example](Assets/screenshots/snake.png)
 
 <!-- Footnotes & References -->
 
