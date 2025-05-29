@@ -4,6 +4,9 @@ import PackageDescription
 
 let package = Package(
 	name: "swift-raylib-examples",
+	platforms: [
+		.macOS(.v11),	
+	],
 	dependencies: [
 		.package(url: "https://github.com/Lancelotbronner/swift-raylib", from: "5.5.2"),
 	],
