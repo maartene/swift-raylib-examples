@@ -1,20 +1,35 @@
-// swift-tools-version:5.5
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version:5.10
 
 import PackageDescription
 
-//MARK: - Package
-
 let package = Package(
 	name: "swift-raylib-examples",
-	platforms: [
-		.macOS(.v12),
-	],
 	dependencies: [
-		.package(url: "https://github.com/Lancelotbronner/swift-raylib", branch: "main"),
+		.package(url: "https://github.com/Lancelotbronner/swift-raylib", from: "5.5.2"),
 	],
 	targets: [
-		
+
+		// Audio Module
+		.example(.audio, "Module Playing", [
+			.copy("mini1111.xm"),
+		]),
+		.example(.audio, "Music Stream", [
+			.copy("country.mp3"),
+		]),
+		.example(.audio, "Raw Stream"),
+		.example(.audio, "Sound Loading", [
+			.copy("sound.wav"),
+			.copy("target.ogg"),
+		]),
+		.example(.audio, "Sound Multi", [
+			.copy("sound.wav"),
+		]),
+
+		// Classics
+		.classic("Arkanoid"),
+//		.classic("Platformer"),
+		.classic("Snake"),
+
 		// Core Module
 		.example(.core, "Basic Window"),
 		.example(.core, "Input Keys"),
@@ -27,13 +42,29 @@ let package = Package(
 		.example(.core, "Drop Files"),
 		.example(.core, "Scissor Test"),
 //		.example(.core, "3D First Person"),
-		
+
+		// Games
+//		.game("HexTrader", resources: true, assets: true),
+//		.game("RPG Example", resources: true),
+
 		// Shapes Module
 		.example(.shapes, "Basic Shapes"),
 		.example(.shapes, "Bouncing Ball"),
 		.example(.shapes, "Color Palette"),
 		.example(.shapes, "Following Eyes"),
-		
+
+		// Text Module
+		.example(.text, "Fonts", [
+			.copy("alagard.png"),
+			.copy("alpha_beta.png"),
+			.copy("jupiter_crash.png"),
+			.copy("mecha.png"),
+			.copy("pixantiqua.png"),
+			.copy("pixelplay.png"),
+			.copy("romulus.png"),
+			.copy("setback.png"),
+		]),
+
 		// Textures Module
 		.example(.textures, "Atlas", [
 			.copy("scarfy.png"),
@@ -49,24 +80,18 @@ let package = Package(
 		.example(.textures, "Sprite Animation", [
 			.copy("scarfy.png"),
 		]),
-
-		// Audio Module
-		.example(.audio, "Module Playing", [
-			.copy("mini1111.xm"),
-		]),
-
-		// Classic Games
-		.classic("Arkanoid"),
-//		.classic("Platformer"),
-		.classic("Snake"),
-		
-		// Games
-//		.game("HexTrader", resources: true, assets: true),
-//		.game("RPG Example", resources: true),
 	]
 )
 
 //MARK: - Templates
+
+enum RaylibModule: String {
+	case audio = "Audio"
+	case core = "Core"
+	case shapes = "Shapes"
+	case text = "Text"
+	case textures = "Textures"
+}
 
 extension Target.Dependency {
 	static let raylib = Self.product(name: "RaylibKit", package: "swift-raylib")
@@ -110,13 +135,4 @@ extension Target {
 		}
 		return target
 	}
-}
-
-//MARK: - Utilites
-
-enum RaylibModule: String {
-	case core = "Core"
-	case shapes = "Shapes"
-	case textures = "Textures"
-	case audio = "Audio"
 }

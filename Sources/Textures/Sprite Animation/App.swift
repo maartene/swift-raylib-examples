@@ -1,7 +1,7 @@
 import RaylibKit
 
 @main struct SpritesheetExample: Applet {
-	let ANIMATION_SPEED_RANGE: ClosedRange<UInt> = 1 ... 15
+	let ANIMATION_SPEED_RANGE = 1...15
 	
 	let sprite: Texture
 	let spritesheet: Spritesheet
@@ -10,7 +10,7 @@ import RaylibKit
 	var frame: Rectangle
 	var timeline = Timeline()
 	var index = 0
-	var framesPerSecond: UInt = 8
+	var framesPerSecond = 8
 	
 	init() throws {
 		Window.create(800, by: 450, title: "Example - Textures - Sprite Animation")

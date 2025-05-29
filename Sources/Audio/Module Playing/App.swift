@@ -1,6 +1,6 @@
 import RaylibKit
 
-@main struct PlayingSoundsExample: Applet {
+@main struct ModulePlayingExample: Applet {
 	var circles: [CircleWave]
 	let music: Music
 	var pause = false
@@ -50,7 +50,7 @@ import RaylibKit
 		music.set(pitch: pitch)
 
 		// scale the time played to the bar's dimensions
-		progress = (music.played / music.length) * (Window.width - 40).toFloat
+		progress = (music.timePlayed / music.timeLength) * (Window.width - 40).toFloat
 
 		// animate the color circles
 		if !pause {

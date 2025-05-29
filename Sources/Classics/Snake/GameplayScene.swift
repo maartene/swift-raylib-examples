@@ -1,3 +1,10 @@
+//
+//  GameplayScene.swift
+//  swift-raylib
+//
+//  Created by Christophe Bronner on 2021-12-26.
+//
+
 import RaylibKit
 
 struct GameplayScene: Scene {
@@ -14,12 +21,12 @@ struct GameplayScene: Scene {
 	private var isPaused = false
 	
 	init() {
-		let offset = Point2(Window.size) % Point2(Constants.sizeOfTile)
+		let offset = Point2(Window.size) % Point2(Configuration.sizeOfTile)
 		area = Rectangle(at: Vector2(offset / 2), size: Window.size - Vector2(offset))
-		grid = Point2(Window.size / Constants.sizeOfTile)
+		grid = Point2(Window.size / Configuration.sizeOfTile)
 
 		segments.reserveCapacity(256)
-		segments.append(Vector2(grid / 2) * Constants.sizeOfTile + area.position)
+		segments.append(Vector2(grid / 2) * Configuration.sizeOfTile + area.position)
 	}
 
 	private var head: Vector2 {
@@ -62,7 +69,7 @@ struct GameplayScene: Scene {
 		}
 		
 		if hasMovement {
-			let newSpeed = Vector2(horizontal, vertical) * Constants.sizeOfTile
+			let newSpeed = Vector2(horizontal, vertical) * Configuration.sizeOfTile
 			var apply = true
 			
 			if segments.count > 1, head + newSpeed == segments[1] {
@@ -104,7 +111,7 @@ struct GameplayScene: Scene {
 
 		while food == nil {
 			let positionInTiles = Point2(.random(in: 0 ..< grid.x), .random(in: 0 ..< grid.y))
-			let position = Vector2(positionInTiles) * Constants.sizeOfTile
+			let position = Vector2(positionInTiles) * Configuration.sizeOfTile
 			guard !segments.contains(position) else { continue }
 			food = position + area.position
 		}
@@ -126,27 +133,27 @@ struct GameplayScene: Scene {
 		Renderer.color = .lightGray
 		
 		for i in 0 ..< grid.x + 1 {
-			let x = i.toFloat * Constants.sizeOfTile.x + area.x
+			let x = i.toFloat * Configuration.sizeOfTile.x + area.x
 			Renderer2D.line(from: x, area.y, to: x, area.bottom.y)
 		}
 		
 		for i in 0 ..< grid.y + 1 {
-			let y = i.toFloat * Constants.sizeOfTile.y + area.y
+			let y = i.toFloat * Configuration.sizeOfTile.y + area.y
 			Renderer2D.line(from: area.x, y, to: area.right.x, y)
 		}
 		
 		// Draw snake
 		
-		Renderer2D.rectangle(at: head, size: Constants.sizeOfTile, color: .darkBlue)
+		Renderer2D.rectangle(at: head, size: Configuration.sizeOfTile, color: .darkBlue)
 		
 		for segment in body {
-			Renderer2D.rectangle(at: segment, size: Constants.sizeOfTile, color: .blue)
+			Renderer2D.rectangle(at: segment, size: Configuration.sizeOfTile, color: .blue)
 		}
 		
 		// Draw Food
 		
 		if let food = food {
-			Renderer2D.rectangle(at: food, size: Constants.sizeOfTile, color: .skyBlue)
+			Renderer2D.rectangle(at: food, size: Configuration.sizeOfTile, color: .skyBlue)
 		}
 		
 		// User Interface

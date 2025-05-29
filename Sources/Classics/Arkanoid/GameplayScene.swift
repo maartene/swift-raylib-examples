@@ -1,18 +1,14 @@
 //
-//  File.swift
-//  
+//  GameplayScene.swift
+//  swift-raylib
 //
 //  Created by Christophe Bronner on 2021-12-26.
 //
 
 import RaylibKit
 
-//MARK: - Gameplay Scene
-
 struct GameplayScene: Scene {
-	
-	//MARK: Properties
-	
+
 	var isPaused = false
 	
 	var player: Player
@@ -20,8 +16,6 @@ struct GameplayScene: Scene {
 	var bricks: [[Brick]]
 	var numberOfBricks: Int
 	let sizeOfBrick: Vector2
-	
-	//MARK: Initialization
 	
 	init() {
 		sizeOfBrick = Vector2(Window.width.toFloat / Configuration.bricksPerLine.toFloat, Window.height.toFloat / 3 / Configuration.linesOfBricks.toFloat)
@@ -51,8 +45,6 @@ struct GameplayScene: Scene {
 			bricks.append(line)
 		}
 	}
-	
-	//MARK: Simulation Methods
 	
 	mutating func update() -> SceneAction {
 		if Keyboard.p.isPressed {
@@ -146,8 +138,6 @@ struct GameplayScene: Scene {
 		
 		return .continue
 	}
-	
-	//MARK: Drawing Methods
 	
 	func draw() {
 		Renderer2D.rectangle(player.body, color: .black)

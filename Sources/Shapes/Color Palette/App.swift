@@ -49,8 +49,8 @@ import RaylibKit
 
 struct PaletteItem {
 	static let size: Float = 100
-	static var index = 0
-	
+	private static var index = 0
+
 	let name: String
 	let color: Color
 	let position: Vector2

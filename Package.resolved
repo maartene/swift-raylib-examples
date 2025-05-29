@@ -1,16 +1,24 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "swift-raylib",
-        "repositoryURL": "https://github.com/Lancelotbronner/swift-raylib",
-        "state": {
-          "branch": "main",
-          "revision": "85d75541876af78314acdfae4eddb39e6b57afa7",
-          "version": null
-        }
+  "originHash" : "c3d956350a976973e4f99f308a41a6dccf9bba639310da20ecd617e0405a2605",
+  "pins" : [
+    {
+      "identity" : "raylib-build",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lancelotbronner/raylib-build.git",
+      "state" : {
+        "revision" : "3efc4f33c5ff9fe81c37fbf04d727426d142ea23",
+        "version" : "5.5.2"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "swift-raylib",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lancelotbronner/swift-raylib",
+      "state" : {
+        "revision" : "4fb66ac3efbf14c653a9b65f825b63c8fb0dfdd2",
+        "version" : "5.5.2"
+      }
+    }
+  ],
+  "version" : 3
 }

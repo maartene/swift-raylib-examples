@@ -1,16 +1,13 @@
 //
-//  File.swift
-//  
+//  Model.swift
+//  swift-raylib
 //
 //  Created by Christophe Bronner on 2021-12-26.
 //
 
 import RaylibKit
 
-//MARK: - Constants
-
-struct Configuration {
-	
+enum Configuration {
 	/// The number of lives for the player
 	static let playerLives = 5
 	
@@ -19,10 +16,7 @@ struct Configuration {
 	
 	/// The number of bricks per line
 	static let bricksPerLine = 20
-	
 }
-
-//MARK: - Structures
 
 struct Player {
 	var body: Rectangle

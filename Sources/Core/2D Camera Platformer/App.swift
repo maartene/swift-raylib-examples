@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  File
+//  swift-raylib
 //
 //  Created by Christophe Bronner on 2021-09-04.
 //
@@ -140,12 +140,10 @@ struct Player {
 
 //MARK: Camera
 
-protocol CameraStyle {
-	
+protocol CameraStyle: Sendable {
 	var name: String { get }
 	
 	mutating func update(_ camera: inout Camera2D, for player: Player)
-	
 }
 
 enum CameraStyles {
@@ -211,8 +209,8 @@ enum CameraStyles {
 		func update(_ camera: inout Camera2D, for player: Player) {
 			camera.offset = Window.size / 2
 			let diff = player.position - camera.target
-			let length = diff.magnitude
-			
+			let length = diff.length
+
 			if length > minEffectLength {
 				let speed = max(fractionSpeed * length, minSpeed)
 				camera.target += diff * speed * Time.delta / length

@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//  swift-raylib  
 //
 //  Created by Christophe Bronner on 2021-12-26.
 //
@@ -38,12 +38,12 @@ import Darwin
 		
 		if !Circle(at: leftEye, radius: EYE_RADIUS - 20).contains(leftIris) {
 			let angle = leftEye.angle(with: leftIris)
-			leftIris = leftEye + angle.vector(length: EYE_RADIUS - IRIS_RADIUS)
+			leftIris = leftEye + angle.direction(length: EYE_RADIUS - IRIS_RADIUS)
 		}
 		
 		if !Circle(at: rightEye, radius: EYE_RADIUS - 20).contains(rightIris) {
 			let angle = rightEye.angle(with: rightIris)
-			rightIris = rightEye + angle.vector(length: EYE_RADIUS - IRIS_RADIUS)
+			rightIris = rightEye + angle.direction(length: EYE_RADIUS - IRIS_RADIUS)
 		}
 	}
 	

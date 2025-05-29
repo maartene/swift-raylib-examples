@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  File
+//  swift-raylib
 //
 //  Created by Christophe Bronner on 2021-09-02.
 //
@@ -26,7 +26,7 @@ import RaylibKit
 		case Mouse.side.isPressed: color = .purple
 		case Mouse.extra.isPressed: color = .yellow
 		case Mouse.forward.isPressed: color = .orange
-		case Mouse.backward.isPressed: color = .beige
+		case Mouse.back.isPressed: color = .beige
 		default: break
 		}
 	}
